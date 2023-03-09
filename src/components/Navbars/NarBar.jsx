@@ -85,7 +85,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   ml="2"
                 >
                   <Text fontSize="sm" fontWeight={700} color="#F95700">
-                    Demo user
+                    Demo
                   </Text>
                   <Text fontSize="xs" color="#B8BFCC">
                     Admin
