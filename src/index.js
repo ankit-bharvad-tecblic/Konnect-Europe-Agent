@@ -5,6 +5,7 @@ import App from "./App";
 
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { customeTheming } from "./components/common/Theme/Theme";
 const test = () => {
   window.addEventListener("storage", ({ oldValue, newValue }) => {
     // Note: For this app we don't have any server to verify role/roles, in your case you can verify role/roles from your server and update accordingly.
@@ -19,7 +20,7 @@ test();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ChakraProvider>
+    <ChakraProvider theme={customeTheming}>
       <App />
     </ChakraProvider>
   </BrowserRouter>

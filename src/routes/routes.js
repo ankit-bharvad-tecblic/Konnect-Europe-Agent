@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import { Navigate } from "react-router-dom";
+import ProductCard from "../components/Card/ProductCard";
 import Layout from "../components/Layout/Layout";
+import { BannerCarousels } from "../pages/travelAgentPage";
 
 const isAuth = true;
 
@@ -42,7 +44,8 @@ const routes = [
       <ProtectedRoutes>
         <Layout>
           <Suspense fallback={<div>Loading...</div>}>
-            <div>dashboard</div>
+            <BannerCarousels />
+            <ProductCard />
           </Suspense>
         </Layout>
       </ProtectedRoutes>
