@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { customeTheming } from "./components/common/Theme/Theme";
+import { store } from "./app/store";
+
 const test = () => {
   window.addEventListener("storage", ({ oldValue, newValue }) => {
     // Note: For this app we don't have any server to verify role/roles, in your case you can verify role/roles from your server and update accordingly.
@@ -20,8 +22,10 @@ test();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ChakraProvider theme={customeTheming}>
-      <App />
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider theme={customeTheming}>
+        <App />
+      </ChakraProvider>
+    </Provider>
   </BrowserRouter>
 );
